@@ -29,13 +29,11 @@ public partial class BrowserTravelTestDbContext : DbContext
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__authors__3213E83F6F4E9B95");
+            entity.HasKey(e => e.Id).HasName("PK__authors__3213E83F959742AF");
 
             entity.ToTable("authors");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Lastname)
                 .HasMaxLength(45)
                 .IsUnicode(false)
@@ -58,7 +56,7 @@ public partial class BrowserTravelTestDbContext : DbContext
                         .HasConstraintName("FK__author_bo__autho__3E52440B"),
                     j =>
                     {
-                        j.HasKey("AuthorId", "BookIsbn").HasName("PK__author_b__20E69C9F683304C5");
+                        j.HasKey("AuthorId", "BookIsbn").HasName("PK__author_b__20E69C9F9104F371");
                         j.ToTable("author_book");
                         j.IndexerProperty<int>("AuthorId").HasColumnName("author_id");
                         j.IndexerProperty<long>("BookIsbn").HasColumnName("book_ISBN");
@@ -67,7 +65,7 @@ public partial class BrowserTravelTestDbContext : DbContext
 
         modelBuilder.Entity<Book>(entity =>
         {
-            entity.HasKey(e => e.Isbn).HasName("PK__books__447D36EB474F2942");
+            entity.HasKey(e => e.Isbn).HasName("PK__books__447D36EB107AC16B");
 
             entity.ToTable("books");
 
@@ -90,13 +88,11 @@ public partial class BrowserTravelTestDbContext : DbContext
 
         modelBuilder.Entity<Editorial>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__editoria__3213E83F0590062B");
+            entity.HasKey(e => e.Id).HasName("PK__editoria__3213E83FF3914864");
 
             entity.ToTable("editorials");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Campus)
                 .HasMaxLength(45)
                 .IsUnicode(false)
