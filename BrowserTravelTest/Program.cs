@@ -1,7 +1,14 @@
+using BrowserTravelTest.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+IServiceCollection serviceCollection = builder.Services.AddDbContext<BrowserTravelTestDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
 var app = builder.Build();
 
