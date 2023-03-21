@@ -19,9 +19,6 @@ To install the project, follow these steps:
 3. Build the project.
 4. Run the project.
 
-
-
-
 ## Database Creation
 
 CREATE DATABASE BrowserTravelTestDB;
@@ -80,6 +77,12 @@ To use the project, you can make requests to the API endpoints using a tool like
 - `POST /api/editorials`: Creates a new editorial.
 - `PUT /api/editorials/{id}`: Updates an existing editorial.
 - `DELETE /api/editorials/{id}`: Deletes an editorial.
+
+## Comments
+
+1. As it is right know the endpoint works but the lack the relationship handler for the many to many between books and authors and also the 1 to many in books and editorials for now only the book add endpoint can recieve a list of authors and create the propper relationship between the new book and the authors
+2. The mapper functionalities needed a few fixes so its not implemented so most of the endpoints are showing the information directly from the database this must be fixed
+3. The application dont have and esurecreated for the database so its needed to first make the conection to the existing database having the structure alredy shown in the Database Creation section
 
 ## Contributing
 
