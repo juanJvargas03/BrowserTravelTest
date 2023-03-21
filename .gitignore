@@ -53,6 +53,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-/BrowserTravelTest/obj/Debug/net6.0
-/BrowserTravelTest/bin/Debug/net6.0
-/.vs
+**/.vs
+**/bin/
+**/obj/
